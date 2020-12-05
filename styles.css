@@ -1,0 +1,274 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+}
+
+.power-button, 
+.button-A, 
+.button-B, 
+.button-top,
+.button-right,
+.button-bottom,
+.button-left,
+.button-select,
+.button-start {
+  cursor: pointer;
+}
+
+.container {
+  background: #7b68ee;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 600px;
+  margin: 5em auto;
+  border-radius: 32px 32px 0 0;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+  transition: 0.5s all;
+}
+
+.container:hover {}
+
+.power-button {
+  background: #000;
+  position: absolute;
+  top: 64px;
+  right: -8px;
+  width: 8px;
+  height: 48px;
+  outline: none;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  transition: 0.2s all;
+  /* z-index: -1; */
+}
+
+.power-slide {
+  background: #000;
+  position: absolute;
+  top: 50px;
+  right: -8px;
+  width: 8px;
+  height: 48px;
+  outline: none;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  transition: 0.2s all;
+  /* animation: slide 1s 1; */
+}
+
+/* @keyframes slide {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(16px);
+  }
+} */
+
+.screen-border {
+  background: #000;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  height: -webkit-fill-available;
+  max-height: 250px;
+  padding: 8px 8px 0 8px;
+  margin: 32px auto 0 auto;
+  border-radius: 8px 8px 16px 16px;
+}
+
+.border-curve {
+  background: #000;
+  position: absolute;
+  right: 0;
+  bottom: -9px;
+  width: 100%;
+  height: 40px;
+  border-radius: 0 0  40% 40%;
+}
+
+.screen {
+  background: #c1d6a7;
+  position: relative;
+  align-self: center;
+  width: 70%;
+  height: 70%;
+  margin: auto;
+  overflow: hidden;
+  transition: 0.9s all;
+}
+
+.screen-on {
+  background: #fff;
+  position: relative;
+  width: 70%;
+  height: 70%;
+  overflow: hidden;
+  transition: 0.9s all;
+}
+
+.screen-text {
+  font-weight: bold;
+}
+
+.screen-logo {
+  color: #fff;
+  margin: 8px auto;
+  z-index: 1;
+}
+
+.glass-effect {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  right: 16px;
+  width: 500px;
+  height:130px;
+  transform: rotate(-30deg);
+  opacity: 0.5;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: -webkit-fill-available;
+}
+
+.buttons-AB {
+  background: transparent;
+  width: 80px;
+  height: 80px;
+  margin: auto 32px 16px 0;
+}
+
+.button-A, .button-B {
+  background: #3b4252;
+  color: #19191b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 24px;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+  outline: none;
+  transition: 0.2s all;
+}
+
+.button-A {
+  margin-left: 40px;
+}
+
+.button-A:active, .button-B:active {
+  box-shadow: none;
+}
+
+.buttons-directions {
+  background: transparent;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  margin: auto 0 16px 32px;
+}
+
+.button-top, 
+.button-right, 
+.button-bottom, 
+.button-left, 
+.center-joint {
+  background: #3b4252;
+  position: absolute;
+}
+
+.button-top {
+  top: 8px;
+  width: 24px;
+  height: 32px;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.button-right {
+  right: 8px;
+  width: 32px;
+  height: 24px;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.button-bottom {
+  bottom: 8px;
+  width: 24px;
+  height: 32px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.button-left {
+  left: 8px;
+  width: 32px;
+  height: 24px;
+  border-radius: 8px 0 0 8px;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.center-joint {
+  width: 24px;
+  height: 24px;
+}
+
+.button-top:active, 
+.button-right:active, 
+.button-bottom:active,
+.button-left:active {
+  box-shadow: none;
+}
+
+.buttons-menu {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100px;
+  height: 40px;
+  margin: 0px auto 72px auto;
+}
+
+.button-start, 
+.button-select {
+  background: #3b4252;
+  width: 40px;
+  height: 8px;
+  margin: 40px 0 0 0;
+  border-radius: 8px;
+  /* transform: rotate(-35deg); */
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.audio-output {
+  align-self: flex-end;
+  z-index: 1;
+}
+
+.footer {
+  background: #7b68ee;
+  position: absolute;
+  bottom: -36px;
+  width: 100%;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 1px 6px 5px -4px rgba(0, 0, 0, 0.3);
+}
