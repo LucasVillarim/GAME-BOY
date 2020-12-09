@@ -4,7 +4,7 @@ body, html {
 }
 
 body {
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .power-button, 
@@ -20,19 +20,31 @@ body {
 }
 
 .container {
-  background: #7b68ee;
+  background: #6951EE;
   position: relative;
   display: flex;
   flex-direction: column;
   width: 350px;
-  height: 600px;
+  height: 570px;
   margin: 5em auto;
   border-radius: 32px 32px 0 0;
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
   transition: 0.5s all;
+  z-index: 3;
 }
 
 .container:hover {}
+
+.shadow-detail {
+  position: absolute;
+  align-self: center;
+  width: 210px;
+  height: 310px;
+  bottom: 7%;
+  border-radius: 0 0 32px 32px;
+  background: linear-gradient(to right, #826AFF, #826AFF, #755DFA, #755DFA);
+  z-index: -1;
+}
 
 .power-button {
   background: #000;
@@ -59,17 +71,9 @@ body {
   border: none;
   border-radius: 0 8px 8px 0;
   transition: 0.2s all;
-  /* animation: slide 1s 1; */
 }
 
-/* @keyframes slide {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(16px);
-  }
-} */
+
 
 .screen-border {
   background: #000;
@@ -120,8 +124,17 @@ body {
 }
 
 .screen-logo {
-  color: #fff;
-  margin: 8px auto;
+  font-family: 'Krona One', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 14px;
+  color: #d9d9d9;
+  margin: 16px auto;
+  -webkit-transform:scale(1,1.5); /* Safari and Chrome */
+  -moz-transform:scale(1,1.5); /* Firefox */
+  -ms-transform:scale(1,1.5); /* IE 9 */
+  -o-transform:scale(1,1.5); /* Opera */
+  transform:scale(1,1.5); /* W3C */
   z-index: 1;
 }
 
@@ -145,14 +158,17 @@ body {
 
 .buttons-AB {
   background: transparent;
-  width: 80px;
-  height: 80px;
-  margin: auto 32px 16px 0;
+  display: flex;
+  width: 100px;
+  height: 60px;
+  margin: 80px 32px 16px 0;
 }
 
 .button-A, .button-B {
   background: #3b4252;
-  color: #19191b;
+  color: #2f2f31;
+  font-weight: bold;
+  font-size: 19px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,8 +181,16 @@ body {
   transition: 0.2s all;
 }
 
+.button-A:active, .button-B:active {
+  font-size: 18px;
+}
+
+.button-B {
+  margin: 16px 8px 0 0;
+}
+
 .button-A {
-  margin-left: 40px;
+  margin: 0 0 16px 8px;
 }
 
 .button-A:active, .button-B:active {
@@ -181,7 +205,7 @@ body {
   justify-content: center;
   width: 100px;
   height: 100px;
-  margin: auto 0 16px 32px;
+  margin: 64px 0 16px 32px;
 }
 
 .button-top, 
@@ -225,6 +249,48 @@ body {
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
 }
 
+.arrow-top,
+.arrow-right,
+.arrow-bottom,
+.arrow-left {
+  width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 16px solid #555;
+}
+
+.arrow-top {
+  margin: 4px auto;
+}
+
+.arrow-right {
+  margin: 4px 4px 4px auto;
+  -webkit-transform:rotate(90deg); /* Safari and Chrome */
+  -moz-transform:rotate(90deg); /* Firefox */
+  -ms-transform:rotate(90deg); /* IE 9 */
+  -o-transform:rotate(90deg); /* Opera */
+  transform:rotate(90deg); /* W3C */
+}
+
+.arrow-bottom {
+  margin: 12px 4px auto 4px;
+  -webkit-transform:rotate(180deg); /* Safari and Chrome */
+  -moz-transform:rotate(180deg); /* Firefox */
+  -ms-transform:rotate(180deg); /* IE 9 */
+  -o-transform:rotate(180deg); /* Opera */
+  transform:rotate(180deg); /* W3C */
+}
+
+.arrow-left {
+  margin: 4px auto 4px 4px;
+  -webkit-transform:rotate(270deg); /* Safari and Chrome */
+  -moz-transform:rotate(270deg); /* Firefox */
+  -ms-transform:rotate(270deg); /* IE 9 */
+  -o-transform:rotate(270deg); /* Opera */
+  transform:rotate(270deg); /* W3C */
+}
+
 .center-joint {
   width: 24px;
   height: 24px;
@@ -264,7 +330,7 @@ body {
 }
 
 .footer {
-  background: #7b68ee;
+  background: #6951EE;
   position: absolute;
   bottom: -36px;
   width: 100%;

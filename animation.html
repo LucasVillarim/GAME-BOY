@@ -7,30 +7,41 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
   </head>
   <body>
     
     <div class="container">
+      <span class="shadow-detail"></span>
       <div id="power" class="power-button" onclick="powerOn()"></div>
       <div class="screen-border">
         <div class="screen" id="screen">
           <div class="glass-effect"></div>
           <p class="screen-text">NINTENDO</p>
         </div>
-        <p class="screen-logo"><i><strong>GAME BOY</strong></i></p>
+        <p class="screen-logo">GAME BOY</p>
         <span class="border-curve"></span>
       </div>
       <div class="buttons-container">
         <div class="buttons-directions">
-          <div class="button-top"></div>
-          <div class="button-right"></div>
-          <div class="button-bottom"></div>
-          <div class="button-left"></div>
+          <div class="button-top">
+            <div class="arrow-top"></div>
+          </div>
+          <div class="button-right">
+            <div class="arrow-right"></div>
+          </div>
+          <div class="button-bottom">
+            <div class="arrow-bottom"></div>
+          </div>
+          <div class="button-left">
+            <div class="arrow-left"></div>
+          </div>
           <div class="center-joint"></div>
         </div>
         <div class="buttons-AB">
-          <button class="button-A">A</button>
           <button class="button-B">B</button>
+          <button class="button-A">A</button>
         </div>
       </div>
       <div class="buttons-menu">
