@@ -14,7 +14,7 @@
     
     <div class="container">
       <span class="shadow-detail"></span>
-      <div id="power" class="power-button" onclick="powerOn()"></div>
+      <aside id="power" class="power-button" onclick="powerOn()"></aside>
       <div class="screen-border">
         <div class="screen" id="screen">
           <div class="glass-effect"></div>
@@ -23,8 +23,8 @@
         <p class="screen-logo">GAME BOY</p>
         <span class="border-curve"></span>
       </div>
-      <div class="buttons-container">
-        <div class="buttons-directions">
+      <section class="buttons-container">
+        <section class="buttons-directions">
           <div class="button-top">
             <div class="arrow-top"></div>
           </div>
@@ -38,23 +38,34 @@
             <div class="arrow-left"></div>
           </div>
           <div class="center-joint"></div>
-        </div>
-        <div class="buttons-AB">
+        </section>
+        <section class="buttons-AB">
           <button class="button-B">B</button>
           <button class="button-A">A</button>
-        </div>
-      </div>
+        </section>
+      </section>
       <div class="buttons-menu">
         <div class="button-start"></div>
         <div class="button-select"></div>
       </div>
-      <div class="audio-output">
-        audio output
-      </div>
+      <section class="audio-output">
+        <div class="outputs-wrapper" id="audio">
+          <div class="vertical-outputs"></div>
+          <div class="vertical-outputs top-24"></div>
+          <div class="vertical-outputs top-48"></div>
+          <div class="vertical-outputs top-72"></div>
+
+          <div class="horizontal-outputs">
+            <span class="output"></span>
+            <span class="output"></span>
+            <span class="output"></span>
+            <span class="output"></span>
+          </div>
+        </div>
+      </section>
       <div class="footer"></div>
     </div>
 
-    <script src="script.js"></script>
-    <script src="" async defer></script>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

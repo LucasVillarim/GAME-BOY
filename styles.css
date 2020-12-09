@@ -284,11 +284,11 @@ body {
 
 .arrow-left {
   margin: 4px auto 4px 4px;
-  -webkit-transform:rotate(270deg); /* Safari and Chrome */
-  -moz-transform:rotate(270deg); /* Firefox */
-  -ms-transform:rotate(270deg); /* IE 9 */
-  -o-transform:rotate(270deg); /* Opera */
-  transform:rotate(270deg); /* W3C */
+  -webkit-transform:rotate(-90deg); /* Safari and Chrome */
+  -moz-transform:rotate(-90deg); /* Firefox */
+  -ms-transform:rotate(-90deg); /* IE 9 */
+  -o-transform:rotate(-90deg); /* Opera */
+  transform:rotate(-90deg); /* W3C */
 }
 
 .center-joint {
@@ -325,8 +325,56 @@ body {
 }
 
 .audio-output {
-  align-self: flex-end;
+  /* background: #cc4; */
+  position: absolute;
+  bottom: -10px;
+  right: 16px;
+  width: 80px;
+  height: 80px;
+  transform: skewY(-8deg);
   z-index: 1;
+}
+
+.outputs-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.vertical-outputs {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+
+/* .horizontal-outputs {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  width: 100%;
+  height: 90%;
+} */
+
+.top-24{
+  top: 24px;
+}
+
+.top-48{
+  top: 48px;
+}
+
+.top-72 {
+  top: 72px;
+}
+
+.output {
+  background:#000;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
 }
 
 .footer {
