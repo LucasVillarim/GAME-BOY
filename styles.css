@@ -102,6 +102,7 @@ body {
 .screen {
   background: #c1d6a7;
   position: relative;
+  display: flex;
   align-self: center;
   width: 70%;
   height: 70%;
@@ -119,8 +120,28 @@ body {
   transition: 0.9s all;
 }
 
-.screen-text {
+.screen-text-off {
+  opacity: 0;
+}
+
+.screen-text-on {
+  color: rgb(196, 42, 42);
   font-weight: bold;
+  text-align: center;
+  margin: auto;
+  opacity: 1;
+  animation: fade 0.7s 1; 
+}
+
+@Keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .screen-logo {

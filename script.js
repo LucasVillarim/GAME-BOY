@@ -1,8 +1,10 @@
 function powerOn() {
   let element = document.getElementById("power");
   let screenElement = document.getElementById("screen");
+  let screenContent = document.getElementById("screen-content");
   element.classList.toggle("power-slide");
-  screenElement.classList.toggle("screen-on")
+  screenElement.classList.toggle("screen-on");
+  screenContent.classList.toggle("screen-text-on");
   // alert("ok");
 }
 
