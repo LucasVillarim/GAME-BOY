@@ -130,6 +130,7 @@ body {
   text-align: center;
   margin: auto;
   opacity: 1;
+  transform: 1s ease-out;
   animation: fade 0.7s 1; 
 }
 
@@ -195,7 +196,7 @@ body {
   justify-content: center;
   width: 40px;
   height: 40px;
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 24px;
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
   outline: none;
@@ -379,16 +380,32 @@ body {
   height: 90%;
 } */
 
-.top-24{
-  top: 24px;
+.top-16{
+  top: 16px;
 }
 
 .top-48{
-  top: 48px;
+  top: 32px;
 }
 
 .top-72 {
-  top: 72px;
+  top: 48px;
+}
+
+.second-row {
+  top: 16px;
+}
+
+.third-row {
+  top: 32px;
+}
+
+.fourth-row {
+  top: 48px;
+}
+
+.fifth-row {
+  top: 64px;
 }
 
 .output {
@@ -396,6 +413,13 @@ body {
   width: 6px;
   height: 6px;
   border-radius: 50%;
+}
+
+.first-row .output:first-child, 
+.first-row .output:last-child,
+.fifth-row .output:first-child,
+.fifth-row .output:last-child {
+  background: transparent;
 }
 
 .footer {

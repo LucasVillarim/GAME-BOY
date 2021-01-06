@@ -11,10 +11,10 @@ function powerOn() {
 
 let outputsRow = document.getElementsByClassName("vertical-outputs");
 for (i = 0; i <= outputsRow.length; i++) {
-  for (j = 0; j <= 3; j++) {
-    let output = document.createElement("span");
-    output.setAttribute("class", "output");
-    outputsRow[i].appendChild(output);
+  for (j = 0; j <= 4; j++) {
+      let output = document.createElement("span");
+      output.setAttribute("class", "output");
+      outputsRow[i].appendChild(output);
   }
 }
 
